@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Citas</title>
+</head>
+<body>
+    <h2>Citas Programadas</h2>
+
+    <form action="consultar_citas.php" method="GET">
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha">
+        <input type="submit" value="Consultar">
+    </form>
+
+    <h3>Lista de Citas:</h3>
+    <div id="citas-lista">
+        <?php
+        // Consultar citas desde la base de datos
+        include 'consultar_citas.php';
+        ?>
+    </div>
+</body>
+</html>
+<?php

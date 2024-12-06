@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultorio Dental</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>Consultorio Dental</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="hero">
+        <h2>Bienvenido a nuestro Consultorio Dental</h2>
+        <p>Le ofrecemos atención de calidad para cuidar su salud bucal.</p>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <div class="servicios-lista">
+            <div class="servicio">
+                <h3>Revisión y limpieza</h3>
+                <p>Realizamos chequeos dentales y limpiezas profesionales para mantener su sonrisa sana.</p>
+            </div>
+            <div class="servicio">
+                <h3>Tratamientos de ortodoncia</h3>
+                <p>Ofrecemos soluciones personalizadas para corregir la alineación de los dientes.</p>
+            </div>
+            <div class="servicio">
+                <h3>Implantes dentales</h3>
+                <p>Colocamos implantes dentales de alta calidad para restaurar dientes perdidos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Equipo -->
+    <section id="equipo">
+        <h2>Conozca a nuestro Equipo</h2>
+        <div class="equipo-miembros">
+            <div class="miembro">
+                <h3>Dr. Juan Pérez</h3>
+                <p>Especialista en Ortodoncia con más de 10 años de experiencia.</p>
+            </div>
+            <div class="miembro">
+                <h3>Dra. Daniela González</h3>
+                <p>Odontóloga general, experta en tratamientos preventivos y de restauración.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Si tiene alguna pregunta o desea agendar una cita, no dude en contactarnos.</p>
+        
+        <form method="POST" action="enviar.php">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+            
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+        
+            <button type="submit">Enviar</button>
+        </form>
+        
+        </form>
+    </section>
+<!-- Agenda -->
+<title>Agenda Consultorio Dental</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Agenda de nuestros dentistas Noviembre-Febrero</h1>
+    </header>
+
+    <!-- Formulario para agregar nueva cita -->
+    <section id="nueva-cita">
+        <h2>Agregar nueva cita</h2>
+        <form id="form-cita">
+            <label for="paciente">Paciente:</label>
+            <input type="text" id="paciente" name="paciente" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="odontologo">dentista:</label>
+            <input type="text" id="odontologo" name="odontologo" required>
+
+            <label for="tratamiento">Tratamiento:</label>
+            <input type="text" id="tratamiento" name="tratamiento" required>
+
+            <button type="submit">Agendar Cita</button>
+        </form>
+    </section>
+
+    <!-- Mostrar citas programadas -->
+    <section id="agenda">
+        <h2>Citas Programadas</h2>
+        <label for="fecha-agenda">Selecciona la fecha:</label>
+        <input type="date" id="fecha-agenda" name="fecha-agenda">
+        <table id="tabla-citas">
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Paciente</th>
+                    <th>dentista</th>
+                    <th>Tratamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las citas se cargarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<script src="script.js"></script>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Consultorio Dental. Todos los derechos reservados.</p>
+    </footer>
+    <button onclick="window.location.href='../proyecto final/tablas.php';">
+        Ir a la siguiente pagina
+    </button>
+</body>
+</html>

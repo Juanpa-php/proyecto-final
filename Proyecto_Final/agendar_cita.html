@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita</title>
+</head>
+<body>
+    <h2>Agendar Cita</h2>
+    <form action="citas.php" method="POST">
+        <!-- Selección de paciente -->
+        <label for="paciente_id">Paciente:</label>
+        <select name="paciente_id" required>
+            <option value="">Seleccionar paciente</option>
+            <?php
+            // Conectar a la base de datos y cargar los pacientes
+            include 'conectar.php';
+            $sql = "SELECT id, nombre FROM pacientes";
+            $result = $conn->query($sql);
+
+            // Mostrar los pacientes disponibles
+            while ($row = $result->fetch_assoc()) {
+                echo "<option value='".$row['id']."'>".$row['nombre']."</option>";
+            }
+
+            $conn->close();
+            ?>
+        </select><br>
+
+        <!-- Fecha de la cita -->
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" required><br>
+
+        <!-- Hora de la cita -->
+        <label for="hora">Hora:</label>
+        <input type="time" name="hora" required><br>
+
+        <!-- Nombre del odontólogo -->
+        <label for="odontologo">dentista:</label>
+        <input type="text" name="odontologo" required><br>
+
+        <!-- Tratamiento a realizar -->
+        <label for="tratamiento">Tratamiento:</label>
+        <input type="text" name="tratamiento" required><br>
+
+        <input type="submit" value="Agendar Cita">
+    </form>
+</body>
+</html>
